@@ -1,0 +1,61 @@
+<script>
+  // Sample periodic table data (limited for demonstration)
+  let elements = [
+    { symbol: "H", name: "Hydrogen", number: 1, category: "nonmetal" },
+    { symbol: "He", name: "Helium", number: 2, category: "noble gas" },
+    { symbol: "Li", name: "Lithium", number: 3, category: "alkali metal" },
+    { symbol: "Be", name: "Beryllium", number: 4, category: "alkaline earth metal" },
+  ];
+
+  let selectedElement = null;
+
+  function selectElement(element) {
+    selectedElement = element;
+  }
+</script>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    padding: 20px;
+  }
+  .element {
+    background: lightgray;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .element:hover {
+    background: gray;
+    color: white;
+  }
+  .details {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 5px;
+  }
+</style>
+
+<main>
+  <h1>Periodic Table Explorer</h1>
+  <div class="grid">
+    {#each elements as element}
+      <div class="element" on:click={() => selectElement(element)}>
+        <strong>{element.symbol}</strong>
+      </div>
+    {/each}
+  </div>
+
+  {#if selectedElement}
+    <div class="details">
+      <h2>{selectedElement.name} ({selectedElement.symbol})</h2>
+      <p>Atomic Number: {selectedElement.number}</p>
+      <p>Category: {selectedElement.category}</p>
+    </div>
+  {/if}
+</main>
