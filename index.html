@@ -1,73 +1,8 @@
-<script>
-  // Declare a reactive variable to hold the page title
-  let title = "Test page with Svelte";
-</script>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
+</body>
+</html>
 
-<style>
-  /* Global styles for the body */
-  :global(body) {
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333; /* Dark grey text color */
-    font-family: sans-serif; /* Use a clean, modern font */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
-  }
-
-  /* Container styles for the main content */
-  .container {
-    background: #ffffff; /* White background for contrast */
-    padding: 2rem;
-    border-radius: 12px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    text-align: center;
-    width: 80%;
-    max-width: 600px; /* Keep content centered and readable */
-  }
-
-  /* Styling for the main heading */
-  h1 {
-    color: #222; /* Slightly darker grey for better visibility */
-    margin-bottom: 0.5rem; /* Space below the title */
-  }
-
-  /* Navigation bar styles */
-  nav {
-    background: #333; /* Dark grey navigation bar */
-    padding: 1rem;
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-    border-radius: 12px 12px 0 0; /* Rounded corners on the top */
-  }
-
-  /* Styling for navigation links */
-  nav a {
-    color: #f5f5f5; /* Light text for contrast */
-    text-decoration: none; /* Remove underlines */
-    margin: 0 1rem; /* Spacing between links */
-    font-weight: bold; /* Make links stand out */
-  }
-
-  /* Hover effect for navigation links */
-  nav a:hover {
-    color: #bbb; /* Light grey hover effect */
-  }
-</style>
-
-<main>
-  <!-- Navigation bar with links -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </nav>
-  
-  <!-- Main content container -->
-  <div class="container">
-    <h1>{title}</h1> <!-- Display the dynamic title -->
-    <p>A simple and elegant web page using Svelte and shades of grey.</p>
-  </div>
-</main>
